@@ -1,0 +1,8 @@
+DOMAIN_NAME=luisanch.42.fr
+MYSQL_USER=wp_user
+MYSQL_PASSWORD=wp_password
+MYSQL_ROOT_PASSWORD=root_password
+WP_ADMIN_USER=luisanch
+WP_ADMIN_PASSWORD=secure_password
+WP_ADMIN_EMAIL=luisanch@42.fr
+WP_TITLE=My WordPress Site

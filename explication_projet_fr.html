@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>explication_projet_fr</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="analyse-détaillée-du-projet-docker-compose---wordpress">Analyse
+Détaillée du Projet Docker Compose - WordPress</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Ce projet implémente une pile LEMP (Linux, Nginx, MariaDB, PHP)
+utilisant Docker Compose pour déployer une installation WordPress. Le
+projet est conçu en suivant les meilleures pratiques des conteneurs
+Docker et utilise des certificats SSL auto-signés pour la communication
+HTTPS.</p>
+<h2 id="structure-générale-du-projet">Structure Générale du Projet</h2>
+<p>Le projet s’organise dans une structure hiérarchique claire :</p>
+<pre><code>.
+- Makefile                  # Automatisation des tâches
+- setup-database.sh        # Script de configuration BD
+- secrets/                  # Identifiants sensibles
+  - mariadb_root_passwd.txt
+  - mariadb_usr_passwd.txt
+  - mycredentials.txt
+- srcs/
+  - docker-compose.yml    # Définition des services
+  - requirements/         # Configurations des conteneurs
+    - mariadb/
+    - nginx/
+    - wordpress/</code></pre>
+<h2 id="analyse-du-makefile">1. Analyse du Makefile</h2>
+<p>Le <code>Makefile</code> agit comme interface principale
+d’automatisation du projet :</p>
+<h3 id="variables-et-configuration">Variables et Configuration</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">COMPOSE_CMD </span><span class="ch">=</span><span class="st"> docker-compose -f srcs/docker-compose.yml</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">DOMAIN_NAME </span><span class="ch">?=</span><span class="st"> luisanch.42.fr</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>export DOMAIN_NAME</span></code></pre></div>
+<ul>
+<li><strong>COMPOSE_CMD</strong> : Définit la commande de base pour
+Docker Compose</li>
+<li><strong>DOMAIN_NAME</strong> : Variable d’environnement exportée
+pour utilisation dans les conteneurs</li>
+<li>L’opérateur <code>?=</code> permet de surcharger la valeur depuis
+les variables d’environnement</li>
+</ul>
+<h3 id="targets-principaux">Targets Principaux</h3>
+<h4 id="target-all-et-run">Target <code>all</code> et
+<code>run</code></h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">all:</span><span class="dt"> run</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dv">run:</span><span class="dt"> build up</span></span></code></pre></div>
+<ul>
+<li><code>all</code> est le target par défaut qui exécute
+<code>run</code></li>
+<li><code>run</code> dépend de <code>build</code> et <code>up</code>,
+les exécutant séquentiellement</li>
+</ul>
+<h4 id="target-build">Target <code>build</code></h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dv">build:</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="ch">$(</span><span class="dt">COMPOSE_CMD</span><span class="ch">)</span> build</span></code></pre></div>
+<p>Construit toutes les images Docker définies dans le
+docker-compose.yml</p>
+<h4 id="target-up">Target <code>up</code></h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dv">up:</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="ch">$(</span><span class="dt">COMPOSE_CMD</span><span class="ch">)</span> up -d</span></code></pre></div>
+<p>Démarre les conteneurs en mode détaché (arrière-plan)</p>
+<h4 id="target-down">Target <code>down</code></h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dv">down:</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="ch">$(</span><span class="dt">COMPOSE_CMD</span><span class="ch">)</span> down -v</span></code></pre></div>
+<p>Arrête et supprime les conteneurs, réseaux et volumes
+(<code>-v</code>)</p>
+<h4 id="target-clean-nettoyage-complet">Target <code>clean</code>
+(Nettoyage Complet)</h4>
+<div class="sourceCode" id="cb7"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dv">clean:</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="ch">@</span><span class="fu">docker stop </span><span class="ch">$$</span><span class="fu">(docker ps -qa) 2&gt;/dev/null || true; </span><span class="ch">\</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">    docker rm </span><span class="ch">$$</span><span class="fu">(docker ps -qa) 2&gt;/dev/null || true; </span><span class="ch">\</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">    docker rmi -f </span><span class="ch">$$</span><span class="fu">(docker images -qa) 2&gt;/dev/null || true; </span><span class="ch">\</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">    docker volume rm </span><span class="ch">$$</span><span class="fu">(docker volume ls -q) 2&gt;/dev/null || true; </span><span class="ch">\</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">    docker network rm </span><span class="ch">$$</span><span class="fu">(docker network ls -q) 2&gt;/dev/null || true; </span><span class="ch">\</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">    docker system prune -f --volumes</span></span></code></pre></div>
+<p>Ce target effectue un nettoyage exhaustif du système Docker : 1.
+Arrête tous les conteneurs (<code>docker ps -qa</code>) 2. Supprime tous
+les conteneurs 3. Supprime toutes les images (<code>-f</code> force la
+suppression) 4. Supprime tous les volumes 5. Supprime tous les réseaux
+6. Exécute le nettoyage système avec
+<code>docker system prune</code></p>
+<h4 id="target-fclean">Target <code>fclean</code></h4>
+<div class="sourceCode" id="cb8"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dv">fclean:</span><span class="dt"> clean</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    sudo rm -rf /home/luisanch/data/mariadb/*</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    sudo rm -rf /home/luisanch/data/wordpress/*</span></code></pre></div>
+<p>Étend <code>clean</code> en supprimant également les données
+persistantes de l’hôte</p>
+<h4 id="target-setup">Target <code>setup</code></h4>
+<div class="sourceCode" id="cb9"><pre class="sourceCode makefile"><code class="sourceCode makefile"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dv">setup:</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="ch">@</span><span class="fu">echo </span><span class="st">&quot;📁 Création des répertoires pour volumes...&quot;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    sudo mkdir -p /home/luisanch/data/mariadb</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    sudo mkdir -p /home/luisanch/data/wordpress</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    sudo mkdir -p /home/luisanch/data/ssl</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    sudo chown -R luisanch:luisanch /home/luisanch/data/</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="ch">@</span><span class="fu">echo </span><span class="st">&quot;🔐 Génération des certificats SSL pour </span><span class="ch">$(</span><span class="dt">DOMAIN_NAME</span><span class="ch">)</span><span class="st">...&quot;</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    ./srcs/requirements/nginx/tools/generate-ssl.sh</span></code></pre></div>
+<p>Prépare l’environnement : 1. Crée les répertoires pour volumes
+persistants 2. Établit les permissions correctes 3. Génère les
+certificats SSL auto-signés</p>
+<h2 id="analyse-du-docker-compose">2. Analyse du Docker Compose</h2>
+<h3 id="structure-des-services">Structure des Services</h3>
+<p>Le <code>docker-compose.yml</code> définit trois services
+interconnectés :</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">services</span><span class="kw">:</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">mariadb</span><span class="kw">:</span><span class="co">    # Base de données</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">wordpress</span><span class="kw">:</span><span class="co">  # Application PHP</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">nginx</span><span class="kw">:</span><span class="co">      # Serveur web/proxy inverse</span></span></code></pre></div>
+<h3 id="service-mariadb">Service MariaDB</h3>
+<div class="sourceCode" id="cb11"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mariadb</span><span class="kw">:</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">container_name</span><span class="kw">:</span><span class="at"> mariadb</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">build</span><span class="kw">:</span><span class="at"> requirements/mariadb</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">image</span><span class="kw">:</span><span class="at"> mariadb</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> mariadb_data:/var/lib/mysql</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">networks</span><span class="kw">:</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> network</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">restart</span><span class="kw">:</span><span class="at"> always</span></span></code></pre></div>
+<h4 id="caractéristiques-clés">Caractéristiques Clés :</h4>
+<ul>
+<li><strong>Volume persistant</strong> : <code>mariadb_data</code> monté
+dans <code>/var/lib/mysql</code></li>
+<li><strong>Réseau isolé</strong> : Connecté au réseau
+<code>network</code></li>
+<li><strong>Redémarrage automatique</strong> :
+<code>restart: always</code></li>
+</ul>
+<h4 id="variables-denvironnement">Variables d’Environnement :</h4>
+<div class="sourceCode" id="cb12"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">environment</span><span class="kw">:</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> MYSQL_ROOT_PASSWORD_FILE=/run/secrets/mariadb_root_password</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> MYSQL_DATABASE=wordpress</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> MYSQL_USER_FILE=/run/secrets/mariadb_user</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> MYSQL_PASSWORD_FILE=/run/secrets/mariadb_password</span></span></code></pre></div>
+<h4 id="système-de-secrets">Système de Secrets :</h4>
+<div class="sourceCode" id="cb13"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">secrets</span><span class="kw">:</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> mariadb_root_password</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> mariadb_user</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> mariadb_password</span></span></code></pre></div>
+<p>Les secrets sont montés dans <code>/run/secrets/</code> et lus depuis
+des fichiers au lieu de variables d’environnement, améliorant la
+sécurité.</p>
+<h3 id="service-wordpress">Service WordPress</h3>
+<div class="sourceCode" id="cb14"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wordpress</span><span class="kw">:</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">container_name</span><span class="kw">:</span><span class="at"> wordpress</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">build</span><span class="kw">:</span><span class="at"> requirements/wordpress</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> wordpress_data:/var/www/wordpress</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">depends_on</span><span class="kw">:</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> mariadb</span></span></code></pre></div>
+<h4 id="dépendances">Dépendances :</h4>
+<ul>
+<li><strong>depends_on</strong> : Garantit que MariaDB démarre avant
+WordPress</li>
+<li><strong>Réseau partagé</strong> : Permet la communication avec
+MariaDB par nom de service</li>
+</ul>
+<h4 id="configuration-de-base-de-données">Configuration de Base de
+Données :</h4>
+<div class="sourceCode" id="cb15"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">environment</span><span class="kw">:</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> DB_NAME=wordpress</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> DB_USER_FILE=/run/secrets/mariadb_user</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> DB_PASSWORD_FILE=/run/secrets/mariadb_password</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> DB_HOST=mariadb</span></span></code></pre></div>
+<p><code>DB_HOST=mariadb</code> utilise la résolution DNS interne de
+Docker Compose.</p>
+<h3 id="service-nginx">Service Nginx</h3>
+<div class="sourceCode" id="cb16"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nginx</span><span class="kw">:</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">container_name</span><span class="kw">:</span><span class="at"> nginx</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">build</span><span class="kw">:</span><span class="at"> requirements/nginx</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">ports</span><span class="kw">:</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="st">&quot;443:443&quot;</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> wordpress_data:/var/www/wordpress:ro</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> /home/luisanch/data/ssl:/etc/nginx/ssl:ro</span></span></code></pre></div>
+<h4 id="configuration-réseau">Configuration Réseau :</h4>
+<ul>
+<li><strong>Port exposé</strong> : Seulement HTTPS (443)</li>
+<li><strong>Volume partagé</strong> : Accès en lecture seule aux
+fichiers WordPress</li>
+<li><strong>Certificats SSL</strong> : Montés depuis l’hôte</li>
+</ul>
+<h3 id="configuration-des-volumes">Configuration des Volumes</h3>
+<div class="sourceCode" id="cb17"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">mariadb_data</span><span class="kw">:</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">driver</span><span class="kw">:</span><span class="at"> local</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">driver_opts</span><span class="kw">:</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">type</span><span class="kw">:</span><span class="at"> none</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">device</span><span class="kw">:</span><span class="at"> /home/luisanch/data/mariadb</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">o</span><span class="kw">:</span><span class="at"> bind</span></span></code></pre></div>
+<p>Les volumes utilisent des <strong>bind mounts</strong> au lieu de
+volumes Docker natifs : - <strong>Avantage</strong> : Accès direct
+depuis l’hôte - <strong>Emplacement fixe</strong> : Données dans
+<code>/home/luisanch/data/</code></p>
+<h3 id="système-de-secrets-1">Système de Secrets</h3>
+<div class="sourceCode" id="cb18"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">secrets</span><span class="kw">:</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">mariadb_root_password</span><span class="kw">:</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">file</span><span class="kw">:</span><span class="at"> ../secrets/mariadb_root_passwd.txt</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">mariadb_user</span><span class="kw">:</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">file</span><span class="kw">:</span><span class="at"> ../secrets/mariadb_usr_passwd.txt</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">mariadb_password</span><span class="kw">:</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">file</span><span class="kw">:</span><span class="at"> ../secrets/mycredentials.txt</span></span></code></pre></div>
+<p>Les secrets sont chargés depuis des fichiers externes, séparant les
+identifiants du code.</p>
+<h2 id="analyse-du-conteneur-mariadb">3. Analyse du Conteneur
+MariaDB</h2>
+<h3 id="dockerfile-de-mariadb">Dockerfile de MariaDB</h3>
+<div class="sourceCode" id="cb19"><pre class="sourceCode dockerfile"><code class="sourceCode dockerfile"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> debian:12-slim</span></code></pre></div>
+<p>Utilise <strong>Debian 12 Slim</strong> comme image de base,
+priorisant la sécurité et la taille réduite.</p>
+<h4 id="installation-des-paquets">Installation des Paquets :</h4>
+<div class="sourceCode" id="cb20"><pre class="sourceCode dockerfile"><code class="sourceCode dockerfile"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> <span class="ex">apt-get</span> update <span class="kw">&amp;&amp;</span> <span class="ex">apt-get</span> install <span class="at">-y</span> <span class="dt">\</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    mariadb-server <span class="dt">\</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    mariadb-client <span class="dt">\</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    gettext-base <span class="dt">\</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&amp;&amp;</span> <span class="fu">rm</span> <span class="at">-rf</span> /var/lib/apt/lists/<span class="pp">*</span></span></code></pre></div>
+<ul>
+<li><strong>mariadb-server</strong> : Serveur de base de données</li>
+<li><strong>mariadb-client</strong> : Outils client</li>
+<li><strong>gettext-base</strong> : Pour l’interpolation des variables
+d’environnement</li>
+<li><strong>Nettoyage</strong> :
+<code>rm -rf /var/lib/apt/lists/*</code> réduit la taille de
+l’image</li>
+</ul>
+<h4 id="configuration-des-répertoires">Configuration des Répertoires
+:</h4>
+<div class="sourceCode" id="cb21"><pre class="sourceCode dockerfile"><code class="sourceCode dockerfile"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> <span class="fu">mkdir</span> <span class="at">-p</span> /var/lib/mysql /var/run/mysqld /var/log/mysql</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> <span class="fu">chown</span> <span class="at">-R</span> mysql:mysql /var/lib/mysql /var/run/mysqld /var/log/mysql</span></code></pre></div>
+<p>Établit la structure des répertoires et les permissions pour
+l’utilisateur <code>mysql</code>.</p>
+<h4 id="configuration-du-serveur">Configuration du Serveur :</h4>
+<div class="sourceCode" id="cb22"><pre class="sourceCode dockerfile"><code class="sourceCode dockerfile"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> <span class="bu">echo</span> <span class="st">&quot;[mysqld]&quot;</span> <span class="op">&gt;</span> /etc/mysql/mariadb.conf.d/50-server.cnf <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;datadir = /var/lib/mysql&quot;</span> <span class="op">&gt;&gt;</span> /etc/mysql/mariadb.conf.d/50-server.cnf <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;socket = /var/run/mysqld/mysqld.sock&quot;</span> <span class="op">&gt;&gt;</span> /etc/mysql/mariadb.conf.d/50-server.cnf <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;bind-address = 0.0.0.0&quot;</span> <span class="op">&gt;&gt;</span> /etc/mysql/mariadb.conf.d/50-server.cnf</span></code></pre></div>
+<p>Configuration critique : - <strong>bind-address = 0.0.0.0</strong> :
+Permet les connexions depuis d’autres conteneurs -
+<strong>socket</strong> : Emplacement du socket Unix -
+<strong>datadir</strong> : Répertoire de données (monté comme
+volume)</p>
+<h3 id="script-dentrypoint">Script d’Entrypoint</h3>
+<p>Le <code>entrypoint.sh</code> gère l’initialisation de MariaDB :</p>
+<h4 id="lecture-des-secrets">Lecture des Secrets :</h4>
+<div class="sourceCode" id="cb23"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="va">DB_ROOT_PASSWORD</span><span class="op">=</span><span class="va">$(</span><span class="fu">cat</span> /run/secrets/mariadb_root_password<span class="va">)</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="va">DB_USER</span><span class="op">=</span><span class="va">$(</span><span class="fu">cat</span> /run/secrets/mariadb_user<span class="va">)</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="va">DB_PASSWORD</span><span class="op">=</span><span class="va">$(</span><span class="fu">cat</span> /run/secrets/mariadb_password<span class="va">)</span></span></code></pre></div>
+<h4 id="initialisation-conditionnelle">Initialisation Conditionnelle
+:</h4>
+<div class="sourceCode" id="cb24"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="ot">!</span> <span class="ot">-d</span> <span class="st">&quot;/var/lib/mysql/mysql&quot;</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;📦 Initialisation de la base de données MariaDB...&quot;</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">mysql_install_db</span> <span class="at">--user</span><span class="op">=</span>mysql <span class="at">--datadir</span><span class="op">=</span>/var/lib/mysql <span class="at">--skip-test-db</span></span></code></pre></div>
+<p>N’initialise que si la structure de données précédente n’existe
+pas.</p>
+<h4 id="configuration-des-utilisateurs">Configuration des Utilisateurs
+:</h4>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mysql</span> <span class="at">-e</span> <span class="st">&quot;</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="st">    ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;</span><span class="va">${DB_ROOT_PASSWORD}</span><span class="st">&#39;;</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="st">    CREATE DATABASE IF NOT EXISTS wordpress;</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="st">    CREATE USER IF NOT EXISTS &#39;</span><span class="va">${DB_USER}</span><span class="st">&#39;@&#39;%&#39; IDENTIFIED BY &#39;</span><span class="va">${DB_PASSWORD}</span><span class="st">&#39;;</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="st">    GRANT ALL PRIVILEGES ON wordpress.* TO &#39;</span><span class="va">${DB_USER}</span><span class="st">&#39;@&#39;%&#39;;</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="st">    FLUSH PRIVILEGES;</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;</span></span></code></pre></div>
+<p>Processus de configuration : 1. Établit le mot de passe root 2. Crée
+la base de données WordPress 3. Crée un utilisateur spécifique avec
+permissions limitées 4. Le motif <code>@&#39;%&#39;</code> permet les connexions
+depuis n’importe quel hôte</p>
+<h2 id="analyse-du-conteneur-nginx">4. Analyse du Conteneur Nginx</h2>
+<h3 id="dockerfile-de-nginx">Dockerfile de Nginx</h3>
+<div class="sourceCode" id="cb26"><pre class="sourceCode dockerfile"><code class="sourceCode dockerfile"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> debian:12-slim</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> <span class="ex">apt-get</span> update <span class="kw">&amp;&amp;</span> <span class="ex">apt-get</span> install <span class="at">-y</span> <span class="dt">\</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>    nginx <span class="dt">\</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>    openssl <span class="dt">\</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>    gettext-base <span class="dt">\</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&amp;&amp;</span> <span class="fu">rm</span> <span class="at">-rf</span> /var/lib/apt/lists/<span class="pp">*</span></span></code></pre></div>
+<p>Paquets essentiels : - <strong>nginx</strong> : Serveur web -
+<strong>openssl</strong> : Pour la validation des certificats SSL -
+<strong>gettext-base</strong> : Pour la substitution des variables
+d’environnement</p>
+<h4 id="configuration-dynamique">Configuration Dynamique :</h4>
+<div class="sourceCode" id="cb27"><pre class="sourceCode dockerfile"><code class="sourceCode dockerfile"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CMD</span> [<span class="st">&quot;/bin/bash&quot;</span>, <span class="st">&quot;-c&quot;</span>, <span class="st">&quot;envsubst &#39;$$DOMAIN_NAME&#39; &lt; /etc/nginx/nginx.conf.template &gt; /etc/nginx/nginx.conf &amp;&amp; nginx -g &#39;daemon off;&#39;&quot;</span>]</span></code></pre></div>
+<p>Cette commande : 1. Substitue les variables d’environnement dans le
+template 2. Démarre Nginx en mode foreground (requis pour les
+conteneurs)</p>
+<h3 id="configuration-de-nginx">Configuration de Nginx</h3>
+<h4 id="configuration-ssl">Configuration SSL :</h4>
+<pre class="nginx"><code>ssl_protocols TLSv1.2 TLSv1.3;
+ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384;
+ssl_prefer_server_ciphers on;
+ssl_session_cache shared:SSL:10m;</code></pre>
+<p>Configuration de sécurité SSL robuste : - <strong>Protocoles
+modernes</strong> : Seulement TLS 1.2 et 1.3 - <strong>Ciphers
+sécurisés</strong> : Configuration restrictive - <strong>Session
+cache</strong> : Optimisation de performance</p>
+<h4 id="redirection-http-vers-https">Redirection HTTP vers HTTPS :</h4>
+<pre class="nginx"><code>server {
+    listen 80;
+    server_name ${DOMAIN_NAME} localhost;
+    return 301 https://$server_name$request_uri;
+}</code></pre>
+<p>Redirection automatique 301 (permanente) de HTTP vers HTTPS.</p>
+<h4 id="configuration-https">Configuration HTTPS :</h4>
+<pre class="nginx"><code>server {
+    listen 443 ssl http2;
+    server_name ${DOMAIN_NAME} localhost;
+    
+    ssl_certificate /etc/nginx/ssl/nginx.crt;
+    ssl_certificate_key /etc/nginx/ssl/nginx.key;
+    
+    root /var/www/wordpress;
+    index index.php index.html index.htm;</code></pre>
+<ul>
+<li><strong>HTTP/2</strong> : Protocole moderne activé</li>
+<li><strong>DocumentRoot</strong> : Pointe vers l’installation
+WordPress</li>
+<li><strong>Certificats</strong> : Chargés depuis le volume monté</li>
+</ul>
+<h4 id="configuration-php-fpm">Configuration PHP-FPM :</h4>
+<pre class="nginx"><code>location ~ \.php$ {
+    fastcgi_pass wordpress:9000;
+    fastcgi_index index.php;
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    include fastcgi_params;
+}</code></pre>
+<ul>
+<li><strong>FastCGI</strong> : Communication avec PHP-FPM dans le
+conteneur WordPress</li>
+<li><strong>Port 9000</strong> : Port standard de PHP-FPM</li>
+<li><strong>wordpress:9000</strong> : Résolution DNS interne de
+Docker</li>
+</ul>
+<h3 id="génération-de-certificats-ssl">Génération de Certificats
+SSL</h3>
+<p>Le script <code>generate-ssl.sh</code> :</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openssl</span> genrsa <span class="at">-out</span> <span class="va">$SSL_DIR</span>/nginx.key 2048</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="ex">openssl</span> req <span class="at">-new</span> <span class="at">-x509</span> <span class="at">-key</span> <span class="va">$SSL_DIR</span>/nginx.key <span class="at">-out</span> <span class="va">$SSL_DIR</span>/nginx.crt <span class="at">-days</span> 365 <span class="dt">\</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">-subj</span> <span class="st">&quot;/C=ES/ST=Madrid/L=Madrid/O=42/OU=IT/CN=</span><span class="va">$DOMAIN</span><span class="st">&quot;</span></span></code></pre></div>
+<p>Génère : 1. <strong>Clé privée RSA</strong> : 2048 bits 2.
+<strong>Certificat auto-signé</strong> : Valide 365 jours 3.
+<strong>Subject</strong> : Informations de l’organisation</p>
+<h2 id="analyse-du-conteneur-wordpress">5. Analyse du Conteneur
+WordPress</h2>
+<h3 id="dockerfile-de-wordpress">Dockerfile de WordPress</h3>
+<h4 id="stack-php-complet">Stack PHP Complet :</h4>
+<div class="sourceCode" id="cb33"><pre class="sourceCode dockerfile"><code class="sourceCode dockerfile"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> <span class="ex">apt-get</span> update <span class="kw">&amp;&amp;</span> <span class="ex">apt-get</span> install <span class="at">-y</span> <span class="dt">\</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>    php8.2-fpm <span class="dt">\</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>    php8.2-mysql <span class="dt">\</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    php8.2-curl <span class="dt">\</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>    php8.2-gd <span class="dt">\</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>    php8.2-intl <span class="dt">\</span></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>    php8.2-mbstring <span class="dt">\</span></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>    php8.2-soap <span class="dt">\</span></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>    php8.2-xml <span class="dt">\</span></span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>    php8.2-xmlrpc <span class="dt">\</span></span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>    php8.2-zip <span class="dt">\</span></span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>    php8.2-cli <span class="dt">\</span></span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>    wget <span class="dt">\</span></span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>    unzip <span class="dt">\</span></span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a>    gettext-base <span class="dt">\</span></span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a>    mariadb-client</span></code></pre></div>
+<p>Extensions PHP essentielles pour WordPress : -
+<strong>php8.2-mysql</strong> : Connectivité avec MariaDB -
+<strong>php8.2-gd</strong> : Manipulation d’images -
+<strong>php8.2-curl</strong> : Communications HTTP -
+<strong>php8.2-mbstring</strong> : Gestion des chaînes multibyte -
+<strong>php8.2-xml</strong> : Traitement XML -
+<strong>mariadb-client</strong> : Pour les scripts de configuration</p>
+<h4 id="téléchargement-de-wordpress">Téléchargement de WordPress :</h4>
+<div class="sourceCode" id="cb34"><pre class="sourceCode dockerfile"><code class="sourceCode dockerfile"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> <span class="fu">wget</span> https://wordpress.org/latest.tar.gz <span class="dt">\</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&amp;&amp;</span> <span class="fu">tar</span> <span class="at">-xzf</span> latest.tar.gz <span class="dt">\</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&amp;&amp;</span> <span class="fu">mv</span> wordpress/<span class="pp">*</span> /var/www/wordpress/ <span class="dt">\</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&amp;&amp;</span> <span class="fu">rm</span> <span class="at">-rf</span> wordpress latest.tar.gz</span></code></pre></div>
+<p>Télécharge la version la plus récente de WordPress directement depuis
+le site officiel.</p>
+<h4 id="configuration-php-fpm-1">Configuration PHP-FPM :</h4>
+<div class="sourceCode" id="cb35"><pre class="sourceCode dockerfile"><code class="sourceCode dockerfile"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> <span class="fu">sed</span> <span class="at">-i</span> <span class="st">&#39;s/listen = \/run\/php\/php8.2-fpm.sock/listen = 9000/&#39;</span> /etc/php/8.2/fpm/pool.d/www.conf</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> <span class="fu">sed</span> <span class="at">-i</span> <span class="st">&#39;s/;daemonize = yes/daemonize = no/&#39;</span> /etc/php/8.2/fpm/php-fpm.conf</span></code></pre></div>
+<p>Modifications critiques : 1. <strong>Port TCP</strong> : Change du
+socket Unix au port TCP 9000 2. <strong>Mode foreground</strong> :
+Nécessaire pour les conteneurs Docker</p>
+<h3 id="configuration-de-wordpress">Configuration de WordPress</h3>
+<h4 id="wp-config-simple.php">wp-config-simple.php</h4>
+<div class="sourceCode" id="cb36"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Lecture des identifiants de base de données depuis les fichiers secrets</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="va">$db_user</span> <span class="op">=</span> <span class="fu">trim</span>(<span class="fu">file_get_contents</span>(<span class="st">&#39;/run/secrets/mariadb_user&#39;</span>))<span class="ot">;</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="va">$db_password</span> <span class="op">=</span> <span class="fu">trim</span>(<span class="fu">file_get_contents</span>(<span class="st">&#39;/run/secrets/mariadb_password&#39;</span>))<span class="ot">;</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="fu">define</span>(<span class="st">&#39;DB_USER&#39;</span><span class="ot">,</span> <span class="va">$db_user</span>)<span class="ot">;</span></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a><span class="fu">define</span>(<span class="st">&#39;DB_PASSWORD&#39;</span><span class="ot">,</span> <span class="va">$db_password</span>)<span class="ot">;</span></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a><span class="fu">define</span>(<span class="st">&#39;DB_HOST&#39;</span><span class="ot">,</span> <span class="st">&#39;mariadb&#39;</span>)<span class="ot">;</span></span></code></pre></div>
+<p><strong>Lecture sécurisée des identifiants</strong> : Lit depuis les
+fichiers secrets au lieu des variables d’environnement.</p>
+<h4 id="configuration-de-sécurité">Configuration de Sécurité :</h4>
+<div class="sourceCode" id="cb37"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">define</span>(<span class="st">&#39;AUTH_KEY&#39;</span><span class="ot">,</span>         <span class="st">&#39;~=%kPnn+AtJtuHcktHv??pK,[&lt;bD+mDa,08rFI`,.^:h?5(u;7p{+!phtF5~N(%&lt;&#39;</span>)<span class="ot">;</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">define</span>(<span class="st">&#39;SECURE_AUTH_KEY&#39;</span><span class="ot">,</span>  <span class="st">&#39;`#JJXFV}2fr;}O@|/y^OL&amp;;1&amp;,(%7 &amp;y&gt;n&amp;u^(hK3~WG1FsE]Vox6bqp&gt;L2#.XrB&#39;</span>)<span class="ot">;</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="co">// ... plus de clés de sécurité</span></span></code></pre></div>
+<p><strong>Clés salt uniques</strong> : Améliorent la sécurité des
+sessions et cookies.</p>
+<h4 id="configuration-des-urls">Configuration des URLs :</h4>
+<div class="sourceCode" id="cb38"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="va">$domain_name</span> <span class="op">=</span> <span class="fu">getenv</span>(<span class="st">&#39;DOMAIN_NAME&#39;</span>) <span class="ot">?:</span> <span class="st">&#39;luisanch.42.fr&#39;</span><span class="ot">;</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">define</span>(<span class="st">&#39;WP_HOME&#39;</span><span class="ot">,</span> <span class="st">&#39;https://&#39;</span> <span class="op">.</span> <span class="va">$domain_name</span>)<span class="ot">;</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">define</span>(<span class="st">&#39;WP_SITEURL&#39;</span><span class="ot">,</span> <span class="st">&#39;https://&#39;</span> <span class="op">.</span> <span class="va">$domain_name</span>)<span class="ot">;</span></span></code></pre></div>
+<p><strong>URLs dynamiques</strong> : S’adaptent à la variable
+d’environnement DOMAIN_NAME.</p>
+<h4 id="configuration-de-sécurité-avancée">Configuration de Sécurité
+Avancée :</h4>
+<div class="sourceCode" id="cb39"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">define</span>(<span class="st">&#39;DISALLOW_FILE_EDIT&#39;</span><span class="ot">,</span> <span class="kw">true</span>)<span class="ot">;</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">define</span>(<span class="st">&#39;DISALLOW_FILE_MODS&#39;</span><span class="ot">,</span> <span class="kw">true</span>)<span class="ot">;</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="fu">define</span>(<span class="st">&#39;WP_DEBUG&#39;</span><span class="ot">,</span> <span class="kw">true</span>)<span class="ot">;</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="fu">define</span>(<span class="st">&#39;WP_DEBUG_LOG&#39;</span><span class="ot">,</span> <span class="kw">true</span>)<span class="ot">;</span></span></code></pre></div>
+<ul>
+<li><strong>DISALLOW_FILE_EDIT</strong> : Désactive l’éditeur de
+fichiers dans l’admin</li>
+<li><strong>DISALLOW_FILE_MODS</strong> : Empêche l’installation de
+plugins/thèmes</li>
+<li><strong>WP_DEBUG</strong> : Active le logging pour le
+développement</li>
+</ul>
+<h2 id="système-de-mise-en-réseau">6. Système de Mise en Réseau</h2>
+<h3 id="réseau-bridge-personnalisé">Réseau Bridge Personnalisé</h3>
+<div class="sourceCode" id="cb40"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">networks</span><span class="kw">:</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">network</span><span class="kw">:</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">driver</span><span class="kw">:</span><span class="at"> bridge</span></span></code></pre></div>
+<h4 id="avantages-du-réseau-bridge">Avantages du Réseau Bridge :</h4>
+<ol type="1">
+<li><strong>Isolation</strong> : Les conteneurs ne peuvent communiquer
+qu’entre eux</li>
+<li><strong>Résolution DNS</strong> : Chaque service est accessible par
+son nom</li>
+<li><strong>Sécurité</strong> : Pas d’accès direct depuis l’hôte sauf
+par les ports exposés</li>
+</ol>
+<h4 id="communication-entre-services">Communication Entre Services
+:</h4>
+<pre><code>Internet --&amp;gt; Nginx:443 --&amp;gt; WordPress:9000 --&amp;gt; MariaDB:3306</code></pre>
+<ul>
+<li><strong>Nginx</strong> : Seul point d’entrée public</li>
+<li><strong>WordPress</strong> : Accessible seulement depuis Nginx</li>
+<li><strong>MariaDB</strong> : Accessible seulement depuis
+WordPress</li>
+</ul>
+<h2 id="gestion-des-volumes-et-persistance">7. Gestion des Volumes et
+Persistance</h2>
+<h3 id="stratégie-de-bind-mounts">Stratégie de Bind Mounts</h3>
+<div class="sourceCode" id="cb42"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">mariadb_data</span><span class="kw">:</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">driver_opts</span><span class="kw">:</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">type</span><span class="kw">:</span><span class="at"> none</span></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">device</span><span class="kw">:</span><span class="at"> /home/luisanch/data/mariadb</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">o</span><span class="kw">:</span><span class="at"> bind</span></span></code></pre></div>
+<h4 id="avantages-des-bind-mounts">Avantages des Bind Mounts :</h4>
+<ol type="1">
+<li><strong>Accès direct</strong> : Les données sont accessibles depuis
+l’hôte</li>
+<li><strong>Sauvegarde simple</strong> : Sauvegarde et restauration
+faciles</li>
+<li><strong>Migration</strong> : Portabilité entre environnements</li>
+</ol>
+<h4 id="structure-des-données">Structure des Données :</h4>
+<pre><code>/home/luisanch/data/
+- mariadb/          # Données de base de données
+- wordpress/        # Fichiers WordPress
+- ssl/             # Certificats SSL</code></pre>
+<h2 id="sécurité-et-bonnes-pratiques">8. Sécurité et Bonnes
+Pratiques</h2>
+<h3 id="système-de-secrets-2">Système de Secrets</h3>
+<p>Le projet implémente Docker Secrets pour la gestion sécurisée des
+identifiants :</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">secrets</span><span class="kw">:</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">mariadb_root_password</span><span class="kw">:</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">file</span><span class="kw">:</span><span class="at"> ../secrets/mariadb_root_passwd.txt</span></span></code></pre></div>
+<h4 id="bénéfices">Bénéfices :</h4>
+<ol type="1">
+<li><strong>Séparation</strong> : Identifiants en dehors du code</li>
+<li><strong>Montage sécurisé</strong> : Dans <code>/run/secrets/</code>
+avec permissions restrictives</li>
+<li><strong>Pas d’exposition</strong> : N’apparaissent pas dans les
+variables d’environnement</li>
+</ol>
+<h3 id="configuration-ssl-1">Configuration SSL</h3>
+<h4 id="certificats-auto-signés">Certificats Auto-signés :</h4>
+<ul>
+<li><strong>Développement/Test</strong> : Adaptés aux environnements
+non-productifs</li>
+<li><strong>Chiffrement complet</strong> : Protège le trafic entre
+client et serveur</li>
+<li><strong>Génération facile</strong> : Script automatisé</li>
+</ul>
+<h3 id="durcissement-de-wordpress">Durcissement de WordPress</h3>
+<div class="sourceCode" id="cb45"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">define</span>(<span class="st">&#39;DISALLOW_FILE_EDIT&#39;</span><span class="ot">,</span> <span class="kw">true</span>)<span class="ot">;</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">define</span>(<span class="st">&#39;DISALLOW_FILE_MODS&#39;</span><span class="ot">,</span> <span class="kw">true</span>)<span class="ot">;</span></span></code></pre></div>
+<p>Ces configurations : 1. <strong>Empêchent les modifications</strong>
+: Pas d’édition de fichiers depuis l’admin 2. <strong>Sécurité
+additionnelle</strong> : Réduisent la surface d’attaque</p>
+<h2 id="processus-de-déploiement">9. Processus de Déploiement</h2>
+<h3 id="flux-dinitialisation">Flux d’Initialisation</h3>
+<ol type="1">
+<li><p><strong>Préparation de l’environnement</strong> :</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> setup</span></code></pre></div>
+<ul>
+<li>Crée les répertoires</li>
+<li>Génère les certificats SSL</li>
+</ul></li>
+<li><p><strong>Construction des images</strong> :</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> build</span></code></pre></div>
+<ul>
+<li>Construit toutes les images Docker</li>
+</ul></li>
+<li><p><strong>Démarrage des services</strong> :</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> up</span></code></pre></div>
+<ul>
+<li>Démarre les conteneurs dans l’ordre des dépendances</li>
+</ul></li>
+</ol>
+<h3 id="ordre-de-démarrage">Ordre de Démarrage</h3>
+<ol type="1">
+<li><strong>MariaDB</strong> : S’initialise en premier</li>
+<li><strong>WordPress</strong> : Attend que MariaDB soit prêt</li>
+<li><strong>Nginx</strong> : Démarre en dernier, dépend de
+WordPress</li>
+</ol>
+<h3 id="vérification-de-létat">Vérification de l’État</h3>
+<div class="sourceCode" id="cb49"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> info</span></code></pre></div>
+<p>Affiche : - État des conteneurs - URLs d’accès - Informations de
+connectivité</p>
+<h2 id="dépannage-et-maintenance">10. Dépannage et Maintenance</h2>
+<h3 id="commandes-de-diagnostic">Commandes de Diagnostic</h3>
+<h4 id="vérifier-les-logs">Vérifier les logs :</h4>
+<div class="sourceCode" id="cb50"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker-compose</span> <span class="at">-f</span> srcs/docker-compose.yml logs [service]</span></code></pre></div>
+<h4 id="accéder-aux-conteneurs">Accéder aux conteneurs :</h4>
+<div class="sourceCode" id="cb51"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> exec <span class="at">-it</span> [conteneur] /bin/bash</span></code></pre></div>
+<h4 id="vérifier-la-connectivité">Vérifier la connectivité :</h4>
+<div class="sourceCode" id="cb52"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> exec wordpress ping mariadb</span></code></pre></div>
+<h3 id="nettoyage-et-reset">Nettoyage et Reset</h3>
+<h4 id="nettoyage-partiel">Nettoyage partiel :</h4>
+<div class="sourceCode" id="cb53"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> down</span></code></pre></div>
+<h4 id="nettoyage-complet">Nettoyage complet :</h4>
+<div class="sourceCode" id="cb54"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> fclean</span></code></pre></div>
+<p>Supprime : - Tous les conteneurs - Toutes les images - Tous les
+volumes - Données persistantes de l’hôte</p>
+<h2 id="optimisations-et-configuration-avancée">11. Optimisations et
+Configuration Avancée</h2>
+<h3 id="configuration-de-php-fpm">Configuration de PHP-FPM</h3>
+<p>Le projet configure PHP-FPM pour : - <strong>Communication
+TCP</strong> : Au lieu de sockets Unix - <strong>Mode
+foreground</strong> : Compatible avec Docker - <strong>Pool de
+processus</strong> : Configuration par défaut de www</p>
+<h3 id="configuration-de-mariadb">Configuration de MariaDB</h3>
+<ul>
+<li><strong>InnoDB</strong> : Moteur de stockage par défaut</li>
+<li><strong>UTF8</strong> : Charset compatible avec WordPress</li>
+<li><strong>Buffer pool</strong> : Configuration par défaut
+optimisée</li>
+</ul>
+<h3 id="configuration-de-nginx-1">Configuration de Nginx</h3>
+<ul>
+<li><strong>Gzip</strong> : Compression activée par défaut</li>
+<li><strong>Fichiers statiques</strong> : Servis directement par
+Nginx</li>
+<li><strong>Fichiers PHP</strong> : Passés à PHP-FPM</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>Ce projet implémente une architecture robuste et évolutive pour
+WordPress utilisant Docker Compose. La séparation des responsabilités,
+l’utilisation de réseaux isolés, la gestion sécurisée des identifiants
+et la configuration SSL fournissent une base solide pour un
+environnement de développement ou de test.</p>
+<h3 id="points-forts">Points Forts :</h3>
+<ol type="1">
+<li><strong>Architecture claire</strong> : Séparation des services bien
+définie</li>
+<li><strong>Sécurité</strong> : Utilisation de secrets et SSL</li>
+<li><strong>Automatisation</strong> : Makefile pour gestion
+simplifiée</li>
+<li><strong>Persistance</strong> : Données préservées dans les bind
+mounts</li>
+<li><strong>Évolutivité</strong> : Modification et extension
+faciles</li>
+</ol>
+<h3 id="domaines-damélioration-pour-la-production">Domaines
+d’Amélioration pour la Production :</h3>
+<ol type="1">
+<li><strong>Certificats valides</strong> : Remplacer les auto-signés par
+Let’s Encrypt</li>
+<li><strong>Proxy inverse</strong> : Considérer Traefik ou similaire
+pour multiples services</li>
+<li><strong>Monitoring</strong> : Intégrer des solutions de
+surveillance</li>
+<li><strong>Sauvegarde</strong> : Implémenter des stratégies
+automatisées de sauvegarde</li>
+<li><strong>CI/CD</strong> : Intégrer des pipelines de déploiement
+automatisé</li>
+</ol>
+<p>Le projet démontre une excellente compréhension de Docker Compose et
+des meilleures pratiques pour le déploiement d’applications web
+modernes.</p>
+</body>
+</html>
